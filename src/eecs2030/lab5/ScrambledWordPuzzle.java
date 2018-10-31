@@ -35,14 +35,14 @@ public class ScrambledWordPuzzle extends AbstractWordPuzzle {
 		this.solution = solutionWord;
 		// kind of complicate
 		StringBuilder sb = new StringBuilder(solutionWord);
-		StringBuilder sol = new StringBuilder();
+		StringBuilder puz = new StringBuilder();
 		Random r = new Random();
 		while (sb.length() > 0) {
 			int i = r.nextInt(sb.length());
-			sol.append(sb.charAt(i));
+			puz.append(sb.charAt(i));
 			sb.deleteCharAt(i);
 		}
-		this.solution = sol.toString();
+		this.setPuzzleWord(puz.toString());
 	}
 
 	/**
